@@ -1,6 +1,10 @@
-{% extends "mls/base.html" %}
+{% extends "main/base.html" %}
 
 {% load static %}
+
+
+{% block title %} Home | {% endblock title %}
+
 
 {% block content %}
 
@@ -9,97 +13,30 @@
     ================================================== -->
     <section class="mt-n13">
         <div class="flickity-page-dots-vertical flickity-page-dots-white position-static flickity-button-outline button-same-position" data-flickity='{"pageDots": true, "prevNextButtons": true, "cellAlign": "center", "wrapAround": true, "imagesLoaded": true}'>
+            {% for i in sliders %}
             <div class="w-100">
-                <div class="vh-100 bg-cover position-relative overlay overlay-custom-blue" style="background-image: url({% static 'skola/assets/img/covers/cover-14.jpg' %})">
+                <div class="vh-100 bg-cover position-relative overlay overlay-custom-blue" style="background-image: url({{i.image.url}})">
                     <div class="container position-static">
                         <div class="vh-100 row gx-0">
                             <div class="col-lg-6 my-auto" style="z-index:1;">
                                 <!-- Heading -->
                                 <h1 class="display-5 fw-medium text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
-                                    <span class="fw-bold">The Best University</span> <span class="d-block">Of The State</span>
+                                    <span class="fw-bold">{{i.title}}</span> <span class="d-block">{{i.title2}}</span>
                                 </h1>
 
                                 <!-- Text -->
                                 <p class="font-montserrat text-capitalize mb-5 text-white me-xl-12 line-height-md" data-aos="fade-up" data-aos-duration="200">
-                                    Technology is brining a massive wave of evolution on learning things on different ways.
+                                    {{i.discription}}
                                 </p>
 
                                 <!-- Buttons -->
-                                <a href="course-list-v1.html" class="btn text-white-alone font-size-sm btn-slide slide-white btn-wide shadow mb-4 mb-md-0 me-md-5 font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">APPLY NOW</a>
+                                <a href="{{i.link}}" class="btn text-white-alone font-size-sm btn-slide slide-white btn-wide shadow mb-4 mb-md-0 me-md-5 font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">APPLY NOW</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="w-100">
-                <div class="vh-100 bg-cover position-relative overlay overlay-custom-blue" style="background-image: url({% static 'skola/assets/img/covers/cover-7.jpg' %})">
-                    <div class="container position-static">
-                        <div class="vh-100 row gx-0">
-                            <div class="col-lg-6 my-auto" style="z-index:1;">
-                                <!-- Heading -->
-                                <h1 class="display-5 fw-medium text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
-                                    <span class="fw-bold">The Best University</span> <span class="d-block">Of The State</span>
-                                </h1>
-
-                                <!-- Text -->
-                                <p class="font-montserrat text-capitalize mb-5 text-white me-xl-12 line-height-md" data-aos="fade-up" data-aos-duration="200">
-                                    Technology is brining a massive wave of evolution on learning things on different ways.
-                                </p>
-
-                                <!-- Buttons -->
-                                <a href="course-list-v1.html" class="btn text-white-alone font-size-sm btn-slide slide-white btn-wide shadow mb-4 mb-md-0 me-md-5 font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">APPLY NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-100">
-                <div class="vh-100 bg-cover position-relative overlay overlay-custom-blue" style="background-image: url({% static 'skola/assets/img/covers/cover-4.jpg' %})">
-                    <div class="container position-static">
-                        <div class="vh-100 row gx-0">
-                            <div class="col-lg-6 my-auto" style="z-index:1;">
-                                <!-- Heading -->
-                                <h1 class="display-5 fw-medium text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
-                                    <span class="fw-bold">The Best University</span> <span class="d-block">Of The State</span>
-                                </h1>
-
-                                <!-- Text -->
-                                <p class="font-montserrat text-capitalize mb-5 text-white me-xl-12 line-height-md" data-aos="fade-up" data-aos-duration="200">
-                                    Technology is brining a massive wave of evolution on learning things on different ways.
-                                </p>
-
-                                <!-- Buttons -->
-                                <a href="course-list-v1.html" class="btn text-white-alone font-size-sm btn-slide slide-white btn-wide shadow mb-4 mb-md-0 me-md-5 font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">APPLY NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-100">
-                <div class="vh-100 bg-cover position-relative overlay overlay-custom-blue" style="background-image: url({% static 'skola/assets/img/covers/cover-1.jpg' %})">
-                    <div class="container position-static">
-                        <div class="vh-100 row gx-0">
-                            <div class="col-lg-6 my-auto">
-                                <!-- Heading -->
-                                <h1 class="display-5 fw-medium text-white mb-2 text-capitalize font-lora" data-aos="fade-left" data-aos-duration="150">
-                                    <span class="fw-bold">The Best University</span> <span class="d-block">Of The State</span>
-                                </h1>
-
-                                <!-- Text -->
-                                <p class="font-montserrat text-capitalize mb-5 text-white me-xl-12 line-height-md" data-aos="fade-up" data-aos-duration="200">
-                                    Technology is brining a massive wave of evolution on learning things on different ways.
-                                </p>
-
-                                <!-- Buttons -->
-                                <a href="course-list-v1.html" class="btn text-white-alone font-size-sm btn-slide slide-white btn-wide shadow mb-4 mb-md-0 me-md-5 font-montserrat fw-bold" data-aos-duration="200" data-aos="fade-up">APPLY NOW</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
 
@@ -202,7 +139,7 @@
 
     <!-- FEATURED PRODUCT
     ================================================== -->
-    <section class="pt-5 pb-9 py-md-11 pb-xl-16">
+    <section class="pt-5 pb-9 py-md-11 pb-xl-16 ">
         <div class="container">
             <div class="row align-items-center mb-5">
                 <div class="col-md mb-2 mb-md-0">
@@ -727,234 +664,10 @@
         </div>
     </section>
 
-    <!-- VIDEO
-    ================================================== -->
-    <section class="position-relative py-8 py-md-11 py-xl-0">
-        <div class="container position-xl-absolute center-xl">
-            <div class="rounded-lg overflow-hidden text-center jarallax py-12 py-md-14" data-jarallax data-speed=".8" style="background-image: url(assets/img/covers/cover-15.jpg);">
-                <h1 class="text-white font-lora fw-bold mb-1">Video Tour in Skola</h1>
-                <p class="mb-8 text-white font-montserrat">Discover your perfect program in our courses.</p>
-                <!-- Button -->
-                <a href="https://www.youtube.com/watch?v=9I-Y6VQ6tyI" class="btn h-90p w-90p size-30-all rounded-circle btn-white d-inline-flex align-items-center justify-content-center shadow lift" data-fancybox>
-                    <!-- Icon -->
-                    <svg width="14" height="16" viewBox="0 0 14 16" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.8704 6.15374L3.42038 0.328572C2.73669 -0.0923355 1.9101 -0.109836 1.20919 0.281759C0.508282 0.673291 0.0898438 1.38645 0.0898438 2.18929V13.7866C0.0898438 15.0005 1.06797 15.9934 2.27016 16C2.27344 16 2.27672 16 2.27994 16C2.65563 16 3.04713 15.8822 3.41279 15.6591C3.70694 15.4796 3.79991 15.0957 3.62044 14.8016C3.44098 14.5074 3.05697 14.4144 2.76291 14.5939C2.59188 14.6982 2.42485 14.7522 2.27688 14.7522C1.82328 14.7497 1.33763 14.3611 1.33763 13.7866V2.18933C1.33763 1.84492 1.51713 1.53907 1.81775 1.3711C2.11841 1.20314 2.47294 1.21064 2.76585 1.39098L12.2159 7.21615C12.4999 7.39102 12.6625 7.68262 12.6618 8.01618C12.6611 8.34971 12.4974 8.64065 12.2118 8.81493L5.37935 12.9983C5.08548 13.1783 4.9931 13.5623 5.17304 13.8562C5.35295 14.1501 5.73704 14.2424 6.03092 14.0625L12.8625 9.87962C13.5166 9.48059 13.9081 8.78496 13.9096 8.01868C13.9112 7.25249 13.5226 6.55524 12.8704 6.15374Z" fill="currentColor"/>
-                    </svg>
-
-                </a>
-            </div>
-        </div> <!-- / .container -->
-    </section>
-
-    <!-- EVENTS
-    ================================================== -->
-    <section class="py-6 py-md-11 pt-xl-16 bg-white">
-        <div class="container">
-            <div class="mb-8 text-center">
-                <h1 class="font-lora fw-bold mb-1">News & Events</h1>
-                <p class="font-montserrat mb-0 text-capitalize">Discover your perfect program in our courses.</p>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 pb-5 pb-lg-0" data-aos="fade-right">
-                    <!-- Card -->
-                    <div class="card border rounded-lg shadow p-2 lift mb-4 mb-xl-6">
-                        <div class="row gx-0">
-                            <div class="col-auto">
-                                <a href="event-single.html" class="rounded-lg d-flex w-100p h-100p place-center bg-biscay">
-                                    <div class="w-100 text-center">
-                                        <h3 class="text-white mb-0 fw-semi-bold font-size-xxl">06</h3>
-                                        <span class="h4 mb-0 text-white fw-normal">April</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <div class="ms-5 py-2">
-                                    <a href="event-single.html" class="mb-2 me-xl-3 d-block"><h6 class="line-clamp-2 mb-3 font-montserrat fw-semi-bold">Elegant Light Box Paper New Design Conference</h6></a>
-                                    <div class="d-flex align-items-center">
-                                        <div class="me-2 d-flex">
-                                            <!-- Icon -->
-                                            <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14.9748 3.12964C13.6007 1.14086 11.4229 0 9.0002 0C6.57754 0 4.39972 1.14086 3.02557 3.12964C1.65816 5.10838 1.34243 7.61351 2.17929 9.82677C2.40313 10.4312 2.75894 11.0184 3.23433 11.5687L8.52105 17.7784C8.64062 17.919 8.8158 18 9.0002 18C9.18459 18 9.35978 17.919 9.47934 17.7784L14.7646 11.5703C15.2421 11.0169 15.5974 10.4303 15.8194 9.83078C16.658 7.61351 16.3422 5.10838 14.9748 3.12964ZM14.6408 9.38999C14.4697 9.85257 14.1902 10.3099 13.8107 10.7498C13.8096 10.7509 13.8086 10.7519 13.8077 10.7532L9.0002 16.3999L4.1897 10.7497C3.8104 10.3101 3.53094 9.85282 3.35808 9.38581C2.66599 7.55539 2.92864 5.48413 4.06088 3.84546C5.19668 2.20155 6.9971 1.25873 9.0002 1.25873C11.0033 1.25873 12.8035 2.20152 13.9393 3.84546C15.0718 5.48413 15.3346 7.55539 14.6408 9.38999Z" fill="currentColor"/>
-                                                <path d="M9.00019 3.73438C7.0569 3.73438 5.47571 5.31535 5.47571 7.25886C5.47571 9.20237 7.05668 10.7833 9.00019 10.7833C10.9437 10.7833 12.5247 9.20237 12.5247 7.25886C12.5247 5.31556 10.9435 3.73438 9.00019 3.73438ZM9.00019 9.52457C7.75088 9.52457 6.73444 8.50814 6.73444 7.25882C6.73444 6.00951 7.75088 4.99307 9.00019 4.99307C10.2495 4.99307 11.2659 6.00951 11.2659 7.25882C11.2659 8.50814 10.2495 9.52457 9.00019 9.52457Z" fill="currentColor"/>
-                                            </svg>
-
-                                        </div>
-                                        <div class="font-size-sm">London, UK</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card -->
-                    <div class="card border rounded-lg shadow p-2 lift mb-4 mb-xl-6">
-                        <div class="row gx-0">
-                            <div class="col-auto">
-                                <a href="event-single.html" class="rounded-lg d-flex w-100p h-100p place-center bg-biscay">
-                                    <div class="w-100 text-center">
-                                        <h3 class="text-white mb-0 fw-semi-bold font-size-xxl">06</h3>
-                                        <span class="h4 mb-0 text-white fw-normal">April</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <div class="ms-5 py-2">
-                                    <a href="event-single.html" class="mb-2 me-xl-3 d-block"><h6 class="line-clamp-2 mb-3 font-montserrat fw-semi-bold">Elegant Light Box Paper New Design Conference</h6></a>
-                                    <div class="d-flex align-items-center">
-                                        <div class="me-2 d-flex">
-                                            <!-- Icon -->
-                                            <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14.9748 3.12964C13.6007 1.14086 11.4229 0 9.0002 0C6.57754 0 4.39972 1.14086 3.02557 3.12964C1.65816 5.10838 1.34243 7.61351 2.17929 9.82677C2.40313 10.4312 2.75894 11.0184 3.23433 11.5687L8.52105 17.7784C8.64062 17.919 8.8158 18 9.0002 18C9.18459 18 9.35978 17.919 9.47934 17.7784L14.7646 11.5703C15.2421 11.0169 15.5974 10.4303 15.8194 9.83078C16.658 7.61351 16.3422 5.10838 14.9748 3.12964ZM14.6408 9.38999C14.4697 9.85257 14.1902 10.3099 13.8107 10.7498C13.8096 10.7509 13.8086 10.7519 13.8077 10.7532L9.0002 16.3999L4.1897 10.7497C3.8104 10.3101 3.53094 9.85282 3.35808 9.38581C2.66599 7.55539 2.92864 5.48413 4.06088 3.84546C5.19668 2.20155 6.9971 1.25873 9.0002 1.25873C11.0033 1.25873 12.8035 2.20152 13.9393 3.84546C15.0718 5.48413 15.3346 7.55539 14.6408 9.38999Z" fill="currentColor"/>
-                                                <path d="M9.00019 3.73438C7.0569 3.73438 5.47571 5.31535 5.47571 7.25886C5.47571 9.20237 7.05668 10.7833 9.00019 10.7833C10.9437 10.7833 12.5247 9.20237 12.5247 7.25886C12.5247 5.31556 10.9435 3.73438 9.00019 3.73438ZM9.00019 9.52457C7.75088 9.52457 6.73444 8.50814 6.73444 7.25882C6.73444 6.00951 7.75088 4.99307 9.00019 4.99307C10.2495 4.99307 11.2659 6.00951 11.2659 7.25882C11.2659 8.50814 10.2495 9.52457 9.00019 9.52457Z" fill="currentColor"/>
-                                            </svg>
-
-                                        </div>
-                                        <div class="font-size-sm">London, UK</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card -->
-                    <div class="card border rounded-lg shadow p-2 lift mb-4 mb-xl-6">
-                        <div class="row gx-0">
-                            <div class="col-auto">
-                                <a href="event-single.html" class="rounded-lg d-flex w-100p h-100p place-center bg-biscay">
-                                    <div class="w-100 text-center">
-                                        <h3 class="text-white mb-0 fw-semi-bold font-size-xxl">06</h3>
-                                        <span class="h4 mb-0 text-white fw-normal">April</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col">
-                                <div class="ms-5 py-2">
-                                    <a href="event-single.html" class="mb-2 me-xl-3 d-block"><h6 class="line-clamp-2 mb-3 font-montserrat fw-semi-bold">Elegant Light Box Paper New Design Conference</h6></a>
-                                    <div class="d-flex align-items-center">
-                                        <div class="me-2 d-flex">
-                                            <!-- Icon -->
-                                            <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14.9748 3.12964C13.6007 1.14086 11.4229 0 9.0002 0C6.57754 0 4.39972 1.14086 3.02557 3.12964C1.65816 5.10838 1.34243 7.61351 2.17929 9.82677C2.40313 10.4312 2.75894 11.0184 3.23433 11.5687L8.52105 17.7784C8.64062 17.919 8.8158 18 9.0002 18C9.18459 18 9.35978 17.919 9.47934 17.7784L14.7646 11.5703C15.2421 11.0169 15.5974 10.4303 15.8194 9.83078C16.658 7.61351 16.3422 5.10838 14.9748 3.12964ZM14.6408 9.38999C14.4697 9.85257 14.1902 10.3099 13.8107 10.7498C13.8096 10.7509 13.8086 10.7519 13.8077 10.7532L9.0002 16.3999L4.1897 10.7497C3.8104 10.3101 3.53094 9.85282 3.35808 9.38581C2.66599 7.55539 2.92864 5.48413 4.06088 3.84546C5.19668 2.20155 6.9971 1.25873 9.0002 1.25873C11.0033 1.25873 12.8035 2.20152 13.9393 3.84546C15.0718 5.48413 15.3346 7.55539 14.6408 9.38999Z" fill="currentColor"/>
-                                                <path d="M9.00019 3.73438C7.0569 3.73438 5.47571 5.31535 5.47571 7.25886C5.47571 9.20237 7.05668 10.7833 9.00019 10.7833C10.9437 10.7833 12.5247 9.20237 12.5247 7.25886C12.5247 5.31556 10.9435 3.73438 9.00019 3.73438ZM9.00019 9.52457C7.75088 9.52457 6.73444 8.50814 6.73444 7.25882C6.73444 6.00951 7.75088 4.99307 9.00019 4.99307C10.2495 4.99307 11.2659 6.00951 11.2659 7.25882C11.2659 8.50814 10.2495 9.52457 9.00019 9.52457Z" fill="currentColor"/>
-                                            </svg>
-
-                                        </div>
-                                        <div class="font-size-sm">London, UK</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-8" data-aos="fade-left">
-                    <div class="row row-cols-md-2">
-                        <div class="col-md mb-5 mb-lg-0">
-                            <!-- Card -->
-                            <div class="card border shadow p-2 lift sk-fade">
-                                <!-- Image -->
-                                <div class="card-zoom position-relative">
-                                    <a href="blog-single.html" class="card-img d-block sk-thumbnail img-ratio-8"><img class="rounded shadow-light-lg img-fluid" src="{% static 'skola/assets/img/post/post-7.jpg' %}" alt="..."></a>
-
-                                    <a href="blog-single.html" class="badge sk-fade-bottom badge-lg badge-purple badge-pill badge-float bottom-0 left-0 mb-4 ms-4 px-5 me-4">
-                                        <span class="text-white fw-normal font-size-sm">Figma</span>
-                                    </a>
-                                </div>
-
-                                <!-- Footer -->
-                                <div class="card-footer px-2 pb-0 pt-4">
-                                    <ul class="nav mx-n3 mb-3">
-                                        <li class="nav-item px-3">
-                                            <a href="blog-single.html" class="d-flex align-items-center text-gray-800">
-                                                <div class="me-3 d-flex">
-                                                    <!-- Icon -->
-                                                    <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M13.8102 9.52183C13.313 9.08501 12.7102 8.70758 12.0181 8.40008C11.7223 8.2687 11.3761 8.40191 11.2447 8.69762C11.1134 8.99334 11.2466 9.33952 11.5423 9.47102C12.1258 9.73034 12.6287 10.0436 13.0367 10.4021C13.5396 10.8441 13.8281 11.484 13.8281 12.1582V13.2422C13.8281 13.5653 13.5653 13.8281 13.2422 13.8281H1.75781C1.43475 13.8281 1.17188 13.5653 1.17188 13.2422V12.1582C1.17188 11.484 1.46038 10.8441 1.96335 10.4021C2.55535 9.88186 4.2802 8.67188 7.5 8.67188C9.89079 8.67188 11.8359 6.72672 11.8359 4.33594C11.8359 1.94515 9.89079 0 7.5 0C5.10921 0 3.16406 1.94515 3.16406 4.33594C3.16406 5.7336 3.82896 6.97872 4.85893 7.77214C2.97432 8.18642 1.80199 8.98384 1.18984 9.52183C0.433731 10.1862 0 11.147 0 12.1582V13.2422C0 14.2115 0.788498 15 1.75781 15H13.2422C14.2115 15 15 14.2115 15 13.2422V12.1582C15 11.147 14.5663 10.1862 13.8102 9.52183ZM4.33594 4.33594C4.33594 2.59129 5.75535 1.17188 7.5 1.17188C9.24465 1.17188 10.6641 2.59129 10.6641 4.33594C10.6641 6.08059 9.24465 7.5 7.5 7.5C5.75535 7.5 4.33594 6.08059 4.33594 4.33594Z" fill="currentColor"/>
-                                                    </svg>
-
-                                                </div>
-                                                <div class="font-size-sm">Jack Wilson</div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item px-3">
-                                            <a href="blog-single.html" class="d-flex align-items-center text-gray-800">
-                                                <div class="me-2 d-flex">
-                                                    <!-- Icon -->
-                                                    <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M13.0664 1.17188H11.7188V0.46875C11.7188 0.209883 11.5089 0 11.25 0C10.9911 0 10.7812 0.209883 10.7812 0.46875V1.17188H4.21875V0.46875C4.21875 0.209883 4.0089 0 3.75 0C3.4911 0 3.28125 0.209883 3.28125 0.46875V1.17188H1.93359C0.867393 1.17188 0 2.03927 0 3.10547V13.0664C0 14.1326 0.867393 15 1.93359 15H13.0664C14.1326 15 15 14.1326 15 13.0664V3.10547C15 2.03927 14.1326 1.17188 13.0664 1.17188ZM1.93359 2.10938H3.28125V2.57812C3.28125 2.83699 3.4911 3.04688 3.75 3.04688C4.0089 3.04688 4.21875 2.83699 4.21875 2.57812V2.10938H10.7812V2.57812C10.7812 2.83699 10.9911 3.04688 11.25 3.04688C11.5089 3.04688 11.7188 2.83699 11.7188 2.57812V2.10938H13.0664C13.6157 2.10938 14.0625 2.55621 14.0625 3.10547V4.21875H0.9375V3.10547C0.9375 2.55621 1.38434 2.10938 1.93359 2.10938ZM13.0664 14.0625H1.93359C1.38434 14.0625 0.9375 13.6157 0.9375 13.0664V5.15625H14.0625V13.0664C14.0625 13.6157 13.6157 14.0625 13.0664 14.0625Z" fill="currentColor"/>
-                                                    </svg>
-
-                                                </div>
-                                                <div class="font-size-sm">06 April, 2020</div>
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                    <!-- Heading -->
-                                    <a href="blog-single.html" class="d-block"><h6 class="line-clamp-2 h-48 font-montserrat fw-semi-bold mb-2">The Best Destinations to Begin Your Round the World Trip</h6></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md mb-5 mb-lg-0">
-                            <!-- Card -->
-                            <div class="card border shadow p-2 lift sk-fade">
-                                <!-- Image -->
-                                <div class="card-zoom position-relative">
-                                    <a href="blog-single.html" class="card-img d-block sk-thumbnail img-ratio-8"><img class="rounded shadow-light-lg img-fluid" src="{% static 'skola/assets/img/post/post-8.jpg' %}" alt="..."></a>
-
-                                    <a href="blog-single.html" class="badge sk-fade-bottom badge-lg badge-purple badge-pill badge-float bottom-0 left-0 mb-4 ms-4 px-5 me-4">
-                                        <span class="text-white fw-normal font-size-sm">Adobe XD</span>
-                                    </a>
-                                </div>
-
-                                <!-- Footer -->
-                                <div class="card-footer px-2 pb-0 pt-4">
-                                    <ul class="nav mx-n3 mb-3">
-                                        <li class="nav-item px-3">
-                                            <a href="blog-single.html" class="d-flex align-items-center text-gray-800">
-                                                <div class="me-3 d-flex">
-                                                    <!-- Icon -->
-                                                    <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M13.8102 9.52183C13.313 9.08501 12.7102 8.70758 12.0181 8.40008C11.7223 8.2687 11.3761 8.40191 11.2447 8.69762C11.1134 8.99334 11.2466 9.33952 11.5423 9.47102C12.1258 9.73034 12.6287 10.0436 13.0367 10.4021C13.5396 10.8441 13.8281 11.484 13.8281 12.1582V13.2422C13.8281 13.5653 13.5653 13.8281 13.2422 13.8281H1.75781C1.43475 13.8281 1.17188 13.5653 1.17188 13.2422V12.1582C1.17188 11.484 1.46038 10.8441 1.96335 10.4021C2.55535 9.88186 4.2802 8.67188 7.5 8.67188C9.89079 8.67188 11.8359 6.72672 11.8359 4.33594C11.8359 1.94515 9.89079 0 7.5 0C5.10921 0 3.16406 1.94515 3.16406 4.33594C3.16406 5.7336 3.82896 6.97872 4.85893 7.77214C2.97432 8.18642 1.80199 8.98384 1.18984 9.52183C0.433731 10.1862 0 11.147 0 12.1582V13.2422C0 14.2115 0.788498 15 1.75781 15H13.2422C14.2115 15 15 14.2115 15 13.2422V12.1582C15 11.147 14.5663 10.1862 13.8102 9.52183ZM4.33594 4.33594C4.33594 2.59129 5.75535 1.17188 7.5 1.17188C9.24465 1.17188 10.6641 2.59129 10.6641 4.33594C10.6641 6.08059 9.24465 7.5 7.5 7.5C5.75535 7.5 4.33594 6.08059 4.33594 4.33594Z" fill="currentColor"/>
-                                                    </svg>
-
-                                                </div>
-                                                <div class="font-size-sm">Jack Wilson</div>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item px-3">
-                                            <a href="blog-single.html" class="d-flex align-items-center text-gray-800">
-                                                <div class="me-2 d-flex">
-                                                    <!-- Icon -->
-                                                    <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M13.0664 1.17188H11.7188V0.46875C11.7188 0.209883 11.5089 0 11.25 0C10.9911 0 10.7812 0.209883 10.7812 0.46875V1.17188H4.21875V0.46875C4.21875 0.209883 4.0089 0 3.75 0C3.4911 0 3.28125 0.209883 3.28125 0.46875V1.17188H1.93359C0.867393 1.17188 0 2.03927 0 3.10547V13.0664C0 14.1326 0.867393 15 1.93359 15H13.0664C14.1326 15 15 14.1326 15 13.0664V3.10547C15 2.03927 14.1326 1.17188 13.0664 1.17188ZM1.93359 2.10938H3.28125V2.57812C3.28125 2.83699 3.4911 3.04688 3.75 3.04688C4.0089 3.04688 4.21875 2.83699 4.21875 2.57812V2.10938H10.7812V2.57812C10.7812 2.83699 10.9911 3.04688 11.25 3.04688C11.5089 3.04688 11.7188 2.83699 11.7188 2.57812V2.10938H13.0664C13.6157 2.10938 14.0625 2.55621 14.0625 3.10547V4.21875H0.9375V3.10547C0.9375 2.55621 1.38434 2.10938 1.93359 2.10938ZM13.0664 14.0625H1.93359C1.38434 14.0625 0.9375 13.6157 0.9375 13.0664V5.15625H14.0625V13.0664C14.0625 13.6157 13.6157 14.0625 13.0664 14.0625Z" fill="currentColor"/>
-                                                    </svg>
-
-                                                </div>
-                                                <div class="font-size-sm">06 April, 2020</div>
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                    <!-- Heading -->
-                                    <a href="blog-single.html" class="d-block"><h6 class="line-clamp-2 h-48 font-montserrat fw-semi-bold mb-2">An Indigenous Anatolian Syllabic Script From 3500 Years Ago</h6></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- / .row -->
-        </div> <!-- / .container -->
-    </section>
-
+  
     <!-- TESTIMONIAL
     ================================================== -->
-    <section class="py-10 pt-md-11 pb-md-12">
+    <section class="py-10 pt-md-11 pb-md-12 bg-white">
         <div class="container">
             <div class="text-center mb-2 text-capitalize">
                 <h1 class="font-lora fw-bold mb-1">What our students have to say</h1>
@@ -1059,7 +772,7 @@
 
     <!-- INSTRUCTORS
     ================================================== -->
-    <section class="py-10 pt-md-11 pb-md-12 bg-white">
+    <section class="py-10 pt-md-11 pb-md-12 ">
         <div class="container">
             <div class="text-center mb-6">
                 <h1 class="font-lora fw-bold mb-1">Top Rating Instructors</h1>

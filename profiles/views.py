@@ -22,6 +22,9 @@ def my_account_view(request):
 
 
 
-def home_view(request):
+def DO_LOGIN(request, ):   
     
-    return render(request, 'mls/home.html', )
+    return render(request, 'mls/registration/login.html', {})
+
+
+

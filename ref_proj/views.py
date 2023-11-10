@@ -49,3 +49,6 @@ def main_view(request, *args, **kwargs):
     print(request.session.get_expiry_age())
     
     return render(request, 'main.html', {})
+
+
+
