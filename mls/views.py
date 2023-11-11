@@ -27,7 +27,9 @@ def GURUKUL(request):
         'cotegory' : cotegory,
         'course' : course,
     }
-    return render(request,'mls/home.html', context)
+    return render(request,'mls/Main/home.html', context)
+
+
 
 def ABOUT_US(request):    
     cotegory = Categories.objects.all().order_by('id')[0:5]
@@ -61,7 +63,7 @@ def SINGLE_COURS(request):
         'FreeCourse_count': FreeCourse_count,
         'PaidCourse_count': PaidCourse_count,
     }
-    return render(request, 'Main/single_course.html',context)
+    return render(request, 'mls/Main/single_course.html',context)
 
 
 

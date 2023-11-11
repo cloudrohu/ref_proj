@@ -1,5 +1,5 @@
 
-{% extends 'base.html' %}
+{% extends 'mls/base.html' %}
 {% block content %}
 <!-- PAGE TITLE
     ================================================== -->
@@ -32,10 +32,10 @@
                 <!-- Register -->
                 <h3 class="mb-6">Sign Up and Start Learning!</h3>
 
-                {% include 'components/msg.html' %}
+                {% include 'mls/components/msg.html' %}
 
                 <!-- Form Register -->
-                <form class="mb-5" method="post" action="{% url 'signup' %}">
+                <form class="mb-5" method="post" action="{% url "register" %}">
                     {% csrf_token %}
 
                     <!-- Username -->

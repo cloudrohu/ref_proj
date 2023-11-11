@@ -1,7 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'mls/base.html' %}
 {% load static %}
 {% block title %}Home{% endblock title %}
-{% load course_tags %}	
+
 {% block content %}
  <!-- HERO
     ================================================== -->
@@ -11,7 +11,7 @@
                 <div class="col-12 col-md-5 col-lg-5 order-md-2" data-aos="fade-in">
 
                     <!-- Image -->
-                    <img src="{% static 'assets/img/illustrations/illustration-5.svg' %}" class="img-fluid ms-xl-n11 mw-md-174 mb-6 mb-md-0" alt="...">
+                    <img src="{% static 'skola/assets/img/illustrations/illustration-5.svg' %}" class="img-fluid ms-xl-n11 mw-md-174 mb-6 mb-md-0" alt="...">
 
                 </div>
 
@@ -168,7 +168,7 @@
                                             {% else %}
                                             <div class="col-auto px-2 text-right">
                                                 <del class="font-size-sm">₹ {{i.price}}</del>
-                                                <ins class="h4 mb-0 d-block mb-lg-n1">₹ {% discount_calculation i.price i.discount %}</ins>
+                                                <ins class="h4 mb-0 d-block mb-lg-n1">₹ </ins>
                                             </div>
                                             {% endif %}
                                         </div>
@@ -287,7 +287,7 @@
                                             {% else %}
                                             <div class="col-auto px-2 text-right">
                                                 <del class="font-size-sm">₹ {{i.price}}</del>
-                                                <ins class="h4 mb-0 d-block mb-lg-n1">₹ {% discount_calculation i.price i.discount %}</ins>
+                                                <ins class="h4 mb-0 d-block mb-lg-n1">₹ </ins>
                                             </div>
                                             {% endif %}
                                         </div>
@@ -384,7 +384,7 @@
                     <div class="card border shadow p-2 rounded-lg lift sk-fade">
                         <!-- Image -->
                         <div class="card-zoom position-relative">
-                            <a href="#" class="card-img d-block sk-thumbnail img-ratio-3"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/post/post-1.jpg' %}" alt="..."></a>
+                            <a href="#" class="card-img d-block sk-thumbnail img-ratio-3"><img class="rounded shadow-light-lg img-fluid" src="{% static 'skola/assets/img/post/post-1.jpg' %}" alt="..."></a>
 
                             <a href="#" class="badge sk-fade-bottom badge-lg badge-purple badge-pill badge-float bottom-0 left-0 mb-4 ms-4 px-5 me-4">
                                 <span class="text-white fw-normal font-size-sm">Figma</span>
@@ -431,7 +431,7 @@
                     <div class="card border shadow p-2 rounded-lg lift sk-fade">
                         <!-- Image -->
                         <div class="card-zoom position-relative">
-                            <a href="#" class="card-img d-block sk-thumbnail img-ratio-3"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/post/post-2.jpg' %}" alt="..."></a>
+                            <a href="#" class="card-img d-block sk-thumbnail img-ratio-3"><img class="rounded shadow-light-lg img-fluid" src="{% static 'skola/assets/img/post/post-2.jpg' %}" alt="..."></a>
 
                             <a href="#" class="badge sk-fade-bottom badge-lg badge-purple badge-pill badge-float bottom-0 left-0 mb-4 ms-4 px-5 me-4">
                                 <span class="text-white fw-normal font-size-sm">Adobe XD</span>
@@ -478,7 +478,7 @@
                     <div class="card border shadow p-2 rounded-lg lift sk-fade">
                         <!-- Image -->
                         <div class="card-zoom position-relative">
-                            <a href="#" class="card-img d-block sk-thumbnail img-ratio-3"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/post/post-9.jpg' %}" alt="..."></a>
+                            <a href="#" class="card-img d-block sk-thumbnail img-ratio-3"><img class="rounded shadow-light-lg img-fluid" src="{% static 'skola/assets/img/post/post-9.jpg' %}" alt="..."></a>
 
                             <a href="#" class="badge badge-lg sk-fade-bottom badge-purple badge-pill badge-float bottom-0 left-0 mb-4 ms-4 px-5 me-4">
                                 <span class="text-white fw-normal font-size-sm">Photoshop</span>
@@ -525,7 +525,7 @@
                     <div class="card border shadow p-2 rounded-lg lift sk-fade">
                         <!-- Image -->
                         <div class="card-zoom position-relative">
-                            <a href="#" class="card-img d-block sk-thumbnail img-ratio-3"><img class="rounded shadow-light-lg img-fluid" src="{% static 'assets/img/post/post-3.jpg' %}" alt="..."></a>
+                            <a href="#" class="card-img d-block sk-thumbnail img-ratio-3"><img class="rounded shadow-light-lg img-fluid" src="{% static 'skola/assets/img/post/post-3.jpg' %}" alt="..."></a>
 
                             <a href="#" class="badge badge-lg sk-fade-bottom badge-purple badge-pill badge-float bottom-0 left-0 mb-4 ms-4 px-5 me-4">
                                 <span class="text-white fw-normal font-size-sm">Photoshop</span>
@@ -581,7 +581,7 @@
                 </div>
 
                 <div class="col-md-6 order-1 mb-8 mb-md-0" data-aos="zoom-in">
-                    <img class="img-fluid" src="{% static 'assets/img/post/post-10.png' %}" alt="...">
+                    <img class="img-fluid" src="{% static 'skola/assets/img/post/post-10.png' %}" alt="...">
                 </div>
             </div>
 
@@ -592,7 +592,7 @@
                 </div>
 
                 <div class="col-md-6 order-1 mb-8 mb-md-0 order-md-2 text-right" data-aos="zoom-in">
-                    <img class="img-fluid" src="{% static 'assets/img/post/post-11.png' %}" alt="...">
+                    <img class="img-fluid" src="{% static 'skola/assets/img/post/post-11.png' %}" alt="...">
                 </div>
             </div>
         </div>

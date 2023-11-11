@@ -16,10 +16,6 @@ def home_view(request):
     }
     return render(request, 'main/home.html', context)
 
-
-def LMS_HOME(request):
-    return render(request,'mls/home.html', )
-
 def ABOUT_US(request):
     return render(request,'mls/Main/about_us.html', )
 
