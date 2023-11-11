@@ -1,12 +1,18 @@
 from django.shortcuts import render
-from .models import Slider
+from .models import *
 # Create your views here.
 
 
 def home_view(request):
     sliders = Slider.objects.all().order_by('-id')[0:3]
+    founder_member = Founder_Member.objects.all().order_by('-id')[0:15]
+    achiever = Achiever.objects.all().order_by('-id')[0:50]
+
+
     context = {
         'sliders': sliders,        
+        'founder_member': founder_member,        
+        'achiever': achiever,        
     }
     return render(request, 'main/home.html', context)
 

@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path,include
 from profiles.views import *
+from product.views import *
 from ref_proj.views import main_view , signup_view
 from main.views import home_view,ABOUT_US,CONTCAT,PAGE_NOTFOUND
 from profiles.views import my_recommendations_view, my_account_view,DO_LOGIN
@@ -26,6 +27,11 @@ urlpatterns = [
     path('contact', CONTCAT,name='contact'),
     path('404', PAGE_NOTFOUND,name='404'),
 
+
+    path('product', PRODUCT, name='product'),
+
+    path('product_details/<slug:slug>', product_details, name='product_details'),
+    path('product/filter-data',filter_data,name="filter-data"),
 
     # AC
     path('do_login', DO_LOGIN,name='do_login'),
