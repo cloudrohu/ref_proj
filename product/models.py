@@ -103,7 +103,7 @@ class Sub_Category(models.Model):
         return mark_safe('<img src="%s" width="50" height="50" />' % (self.image.url))
 
     def __str__(self):
-        return self.name + " -- " + self.category.name    
+        return self.name + " -- " + self.category.category_name    
 
 
 
