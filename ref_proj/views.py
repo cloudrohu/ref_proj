@@ -27,7 +27,7 @@ def signup_view(request):
         password = form.cleaned_data.get('password1')
         user = authenticate (username=username, password=password)
         login(request,user)
-        return redirect('my-account')
+        return redirect('update-email')
     context = { 
         'form':form
 
