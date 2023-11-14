@@ -1,18 +1,54 @@
-{% extends "base.html" %}
+{% extends "mls/base.html" %}
 
 {% block title %}Home{% endblock title %}
 
 {% block content %}
 
-    {% if request.user.is_authenticated %}
-        {{request.user}}
-    {% else %}
-        <a href="{% url "signup-view" %}">
-            <button class="btn btn-primary"> Create an account</button>
-        </a>
+<!-- PAGE TITLE
+    ================================================== -->
+    <header class="py-8 py-md-11" style="background-image: none;">
+        <div class="container text-center py-xl-2">
+            <h1 class="display-4 fw-semi-bold mb-0">Create Your Account</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                    <li class="breadcrumb-item">
+                        <a class="text-gray-800" href="{% url "home" %}">
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                        Create
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <!-- Img -->
+        <img class="d-none img-fluid" src="...html" alt="...">
+    </header>
 
 
-    {% endif %}
+    <!-- LOGIN
+    ================================================== -->
+    <div class="container mb-11">
+        <div class="row gx-0">
+            <div class="col-md-7 col-xl-4 mx-auto">
+                <!-- Login -->
+                <h3 class="mb-6">Create In to Your Account!</h3>
+                
+                    {% if request.user.is_authenticated %}
+                     {{request.user}}
+                    {% else %}
+                    <!-- Submit -->
+                    <a href="{% url "signup-view" %}">
+                    <button class="btn btn-block btn-primary" type="submit">
+                        Create an account
+                    </button>
+                    
+                    {% endif %}
+              
+            </div>
+        </div>
+    </div>
 
 
 {% endblock content %}

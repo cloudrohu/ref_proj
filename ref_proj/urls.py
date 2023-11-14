@@ -8,7 +8,7 @@ from product.views import *
 from ref_proj.views import main_view , signup_view
 from mls.views import GURUKUL,SINGLE_COURS,filter_data,SEARCH_COURSE,COURSE_DETAILS
 from main.views import home_view,ABOUT_US,CONTCAT,PAGE_NOTFOUND
-from profiles.views import my_recommendations_view, my_account_view,REGISTER,DO_LOGIN
+from profiles.views import my_recommendations_view, my_account_view,REGISTER,DO_LOGIN,Profile_Update,PROFILE
 
 urlpatterns = [ 
 
@@ -26,6 +26,9 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/register', REGISTER,name='register'),
     path('do_login', DO_LOGIN,name='do_login'),
+    path('accounts/profile', PROFILE,name='update-email'),
+    path('accounts/profile_update', Profile_Update,name='profile_update'),
+
 
 
 

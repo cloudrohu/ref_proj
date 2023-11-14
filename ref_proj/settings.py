@@ -48,8 +48,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'profiles',
     
-    'crispy_forms',
-    'crispy_bootstrap4',
+    "crispy_forms",
+    "crispy_bootstrap4",
 
 ]
 
@@ -147,7 +147,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
