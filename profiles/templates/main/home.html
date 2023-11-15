@@ -42,6 +42,7 @@
 
     <!-- FEATURES
     ================================================== -->
+    {% for i in about %}
     <section class="py-8 py-lg-0 mt-lg-n10 mt-xl-n13 z-index-0 position-relative">
         <div class="container">
             <div class="row">
@@ -59,7 +60,7 @@
 
                         <h2 class="font-size-xxl text-white font-lora mb-5 fw-bold">Mission</h2>
 
-                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 text-white font-size-sm line-height-md">There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 text-white font-size-sm line-height-md">{{i.mission | truncatechars:555}}</p>
 
                     </a>
                 </div>
@@ -79,7 +80,7 @@
 
                         <h2 class="font-size-xxl font-lora mb-5 fw-bold text-biscay">Vision</h2>
 
-                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 font-size-sm line-height-md">We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.</p>
+                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 font-size-sm line-height-md">{{i.vision | truncatechars:555}}</p>
 
                        
                     </a>
@@ -106,7 +107,7 @@
 
                         <h2 class="font-size-xxl text-white font-lora mb-5 fw-bold">Values</h2>
 
-                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 text-white font-size-sm line-height-md">We don’t just give students an education and experiences that set them up for success in a career.</p>
+                        <p class="font-montserrat text-capitalize line-clamp-3 mb-7 text-white font-size-sm line-height-md">{{i.values | truncatechars:555}}</p>
 
                         
                     </a>
@@ -114,7 +115,7 @@
             </div>
         </div>
     </section>
-
+    {% endfor %}
     <!-- FEATURED PRODUCT
     ================================================== -->
     <section class="pt-5 pb-9 py-md-11 pb-xl-16 ">

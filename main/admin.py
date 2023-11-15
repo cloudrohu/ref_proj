@@ -31,8 +31,6 @@ class FaqAdmin(admin.ModelAdmin):
     list_editable = ('question','answers')
 
 
-class AboutAdmin(admin.ModelAdmin):    
-    list_display = ('id','main_title','experience','title','sub_title','how_to_work','mission','vision','values')
 
 
 class HeaderAdmin(admin.ModelAdmin):    
@@ -55,7 +53,7 @@ class BannerAdmin(admin.ModelAdmin):
     list_display = ('id','image','name','line_1','line_2')
 
 class AboutAdmin(admin.ModelAdmin):    
-    list_display = ('id','image','main_title','experience','title','sub_title','how_to_work','mission','vision','values')
+    list_display = ('id','image_tag','main_title','experience','title','sub_title','how_to_work','mission','vision','values')
 
 
 admin.site.register(Contact,ContactAdmin)

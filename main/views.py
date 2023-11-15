@@ -6,25 +6,57 @@ from .models import *
 def home_view(request):
     sliders = Slider.objects.all().order_by('-id')[0:3]
     founder_member = Founder_Member.objects.all().order_by('-id')[0:15]
-    achiever = Achiever.objects.all().order_by('-id')[0:50]
+    achiever = Achiever.objects.all().order_by('-id')[0:15]
+    about = About.objects.all().order_by('-id')[0:1]
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
 
 
     context = {
         'sliders': sliders,        
         'founder_member': founder_member,        
         'achiever': achiever,        
+        'about': about,        
+        'header': header,        
+        'footer': footer,        
     }
     return render(request, 'main/home.html', context)
 
 def ABOUT_US(request):
-    return render(request,'mls/Main/about_us.html', )
+
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
+
+
+    context = {               
+        'header': header,        
+        'footer': footer,        
+    }
+    
+    return render(request,'mls/Main/about_us.html',context )
 
 
 
 def CONTCAT(request):
-    return render(request,'mls/Main/contact_us.html', )
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
+
+
+    context = {               
+        'header': header,        
+        'footer': footer,        
+    }
+    return render(request,'mls/Main/contact_us.html',context )
 
 
 
 def PAGE_NOTFOUND(request):
-    return render(request,'mls/base.html', )
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
+
+
+    context = {               
+        'header': header,        
+        'footer': footer,        
+    }
+    return render(request,'mls/base.html',context )

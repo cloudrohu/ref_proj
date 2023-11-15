@@ -7,6 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from time import time
 from .models import *
+from main.models import *
 
 import razorpay
 from ref_proj.settings import *
@@ -20,35 +21,50 @@ def BASE(request):
     return render(request,'base.html', )
 
 def GURUKUL(request):
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     cotegory = Categories.objects.all().order_by('id')[0:7]
     course = Course.objects.filter(status = 'PUBLISH').order_by('-id')
 
     context = {
         'cotegory' : cotegory,
         'course' : course,
+        'header' : header,
+        'footer' : footer,
     }
     return render(request,'mls/Main/home.html', context)
 
 
 
-def ABOUT_US(request):    
+def ABOUT_US(request):
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]    
     cotegory = Categories.objects.all().order_by('id')[0:5]
 
     context = {
         'cotegory' : cotegory,
+        'header' : header,
+        'footer' : footer,
     }
     return render(request,'Main/about_us.html',context)
 
 def CONTCAT(request):
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     cotegory = Categories.objects.all().order_by('id')[0:5]
 
     context = {
         'cotegory' : cotegory,
+        'header' : header,
+        'footer' : footer,
     }
     return render(request,'Main/contact_us.html',context)
 
 #-------------------------------------------------------------------------------------------------------------
 def SINGLE_COURS(request):
+
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     cotegory = Categories.objects.all().order_by('id')[0:5]
     course = Course.objects.filter(status = 'PUBLISH').order_by('-id')
     level = Level.objects.all()
@@ -57,6 +73,9 @@ def SINGLE_COURS(request):
 
 
     context = {
+        'header' : header,
+        'footer' : footer,
+
         'cotegory' : cotegory,
         'course' : course,
         'level' : level,
@@ -72,6 +91,7 @@ def filter_data(request):
     categories = request.GET.getlist('category[]')
     level = request.GET.getlist('level[]')
     price = request.GET.getlist('price[]')
+    
     
 
 
@@ -104,6 +124,8 @@ def filter_data(request):
 
 def COURSE_DETAILS(request,slug):
     cotegory = Categories.get_all_category(Categories)
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     
     time_duration = Video.objects.filter(course__slug = slug).aggregate(sum=Sum('time_duration'))
 
@@ -122,6 +144,8 @@ def COURSE_DETAILS(request,slug):
 
     context = {
         'course':course,
+        'header':header,
+        'footer':footer,
         'cotegory':cotegory,
         'time_duration':time_duration,
         'enroll_status':enroll_status
@@ -133,8 +157,12 @@ def COURSE_DETAILS(request,slug):
 def SEARCH_COURSE(request):
     query = request.GET['query']
     course = Course.objects.filter(title__icontains = query)
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     context = {
         'course':course,
+        'header': header,        
+        'footer': footer,
     }
     return render(request,'search/search.html',context)
 
@@ -142,9 +170,13 @@ def SEARCH_COURSE(request):
 
 #----------------------------------------------------------------------------------------------------------
 def PAGE_NOTFOUND(request):
-    cotegory = Categories.objects.all()    
+    cotegory = Categories.objects.all()
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     context = {        
         'cotegory' : cotegory,       
+        'header' : header,       
+        'footer' : footer,       
         
     }
     return render(request, 'error/error404.html',context)
@@ -155,6 +187,8 @@ def CHECKOUT(request,slug):
     cotegory = Categories.objects.all() 
     course = Course.objects.get(slug = slug)
     action = request.GET.get('action')
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     
     if  course.price == 0:
         course = UserCourse(
@@ -217,6 +251,8 @@ def CHECKOUT(request,slug):
         'cotegory' : cotegory,  
         'course'  : course,    
         'order'  : order,    
+        'header'  : header,    
+        'footer'  : footer,    
         
     }
     return render(request, 'checkout/checkout.html',context)
@@ -225,11 +261,15 @@ def CHECKOUT(request,slug):
 def MY_COURSE(request):
     cotegory = Categories.objects.all()
     course = UserCourse.objects.filter(user = request.user)
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     
     
     context = {        
         'cotegory' : cotegory,
         'course' : course,       
+        'header' : header,       
+        'footer' : footer,       
         
     }
     return render(request, 'course/my_course.html',context)
@@ -240,6 +280,8 @@ def MY_COURSE(request):
 def WATCH_COURSE(request,slug):
     course = Course.objects.filter(slug = slug)  
     lecture =  request.GET.get('lecture')
+    header = Header.objects.all().order_by('-id')[0:1]
+    footer = Footer.objects.all().order_by('-id')[0:1]
     
     
     video = Video.objects.get(id = lecture)
@@ -253,6 +295,8 @@ def WATCH_COURSE(request,slug):
     context = {       
         'course' : course,
         'video'  : video,
+        'footer'  : footer,
+        'header'  : header,
         
         }
         

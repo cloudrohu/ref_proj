@@ -141,6 +141,10 @@ class Header(models.Model):
     
     def __str__(self):
         return self.number
+
+    def image_tag(self):
+        return mark_safe('<img src="%s" width="50" height="50" />' % (self.image.url))
+
     
 class Footer(models.Model):
     color = models.CharField(choices=COLOR,max_length=100)
@@ -208,3 +212,5 @@ class About(models.Model):
 
     def __str__(self):
         return self.main_title
+    def image_tag(self):
+        return mark_safe('<img src="%s" width="50" height="50" />' % (self.image.url))
