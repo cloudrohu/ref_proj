@@ -329,7 +329,9 @@
   
               <!-- Brand -->
               <a class="navbar-brand filter-none" href="{% url "home" %}">
-                  <img src="{% static '' %}skola/assets/img/brand-university.svg" class="navbar-brand-img" alt="...">
+                {% for i in header %}
+                  <img src="{{i.logo.url}}" class="navbar-brand-img" style="height: 60px; width: 135px;" alt="...">
+                  {% endfor %}
               </a>
   
               <!-- Collapse -->
@@ -472,7 +474,7 @@
                     
                         <li class="nav-item dropdown dropdown-full-width "></li>
                          <a class="nav-link dropdown-toggle" id="user" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-                           Hello {{user.username}}
+                           {{user.username}}
                         </a>
 
                         <ul class="dropdown-menu border-xl shadow-none" aria-labelledby="user">
@@ -501,7 +503,7 @@
                     {% elif user.is_authenticated %}
                     <li class="nav-item dropdown dropdown-full-width ">
                          <a class="nav-link dropdown-toggle" id="user" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-                           Hello , {{user.first_name}}&nbsp;{{user.last_name}}
+                          {{user.first_name}}&nbsp;{{user.last_name}}
                         </a>
 
                         <ul class="dropdown-menu border-xl shadow-none" aria-labelledby="user">
@@ -568,8 +570,9 @@
                 <div class="col-12 col-md-4 col-lg-4">
 
                     <!-- Brand -->
-                    <img src="{% static 'skola/assets/img/brand-university.svg' %}" alt="..." class="footer-brand img-fluid mb-4 h-60p filter-none">
-
+                    {% for i in header %}
+                    <img src="{{i.logo.url}}" alt="..." class="footer-brand img-fluid mb-4 h-60p filter-none">
+                    {% endfor %}
                     <!-- Text -->
                     <p class="text-gray-800 mb-4 font-size-sm-alone">
                         329 Queensberry Street, North Melbourne VIC 3051, Australia.

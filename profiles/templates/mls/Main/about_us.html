@@ -6,16 +6,16 @@
     ================================================== -->
     <header class="py-8 py-md-11" style="background-image: none;">
         <div class="container text-center py-xl-2">
-            <h1 class="display-4 fw-semi-bold mb-0">About Us v1</h1>
+            <h1 class="display-4 fw-semi-bold mb-0">About</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-scroll justify-content-center">
                     <li class="breadcrumb-item">
-                        <a class="text-gray-800" href="#">
+                        <a class="text-gray-800" href="{% url "home" %}">
                             Home
                         </a>
                     </li>
                     <li class="breadcrumb-item text-gray-800 active" aria-current="page">
-                        About Us v1
+                        About
                     </li>
                 </ol>
             </nav>
@@ -28,13 +28,14 @@
 
     <!-- ABOUT V1
     ================================================== -->
+    {% for i in about %}
     <div class="container pb-4 pb-xl-7">
         <div class="text-center mb-md-6 mb-4">
-            <h1 class="mb-3">Our Story</h1>
-            <p class="font-size-lg mb-5 text-capitalize">Discover your perfect program in our courses.</p>
+            <h1 class="mb-3">{{i.main_title}}</h1>
+            <p class="font-size-lg mb-5 text-capitalize">{{i.title}}</p>
 
             <p class="w-xl-80 mx-auto line-height-md">
-                Convallis vitae, nunc ut venenatis, lectus. Tellus nunc orci dolor nec facilisis et lacus, eu aliquet. Amet imperdiet ac venenatis, lacus. Tortor interdum quisque et, eu etiam ac. Hac lectus at posuere est consequat euismod tellus ut. Dolor ut diam sed dignissim eget gravida. Lectus mattis hac vitae, sed quis vel ornare sed. Ut vel cursus sed id eu. Laoreet bibendum eget dui sapien bibendum sapien.
+                {{i.sub_title}}
             </p>
         </div>
 
@@ -85,8 +86,8 @@
     <section class="py-5 pt-md-11 pb-md-10 bg-light text-center">
         <div class="container">
             <div class="mb-md-8 mb-4">
-                <h1>Why Study With Skola</h1>
-                <p class="font-size-lg mb-0 text-capitalize">Discover your perfect program in our courses.</p>
+                <h1>Experience Years {{i.experience}}+</h1>
+                <p class="font-size-lg mb-0 text-capitalize">{{i.how_to_work}}</p>
             </div>
 
             <div class="row">
@@ -108,8 +109,8 @@
                         </div>
                     </div>
 
-                    <h4 class="mb-1">Learn Anything</h4>
-                    <p class="px-lg-7 px-xl-8">Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                    <h4 class="mb-1">Mission</h4>
+                    <p class="px-lg-7 px-xl-8">{{i.mission}}</p>
                 </div>
 
                 <div class="col-md-4 mb-4 mb-md-0">
@@ -123,8 +124,8 @@
                         </div>
                     </div>
 
-                    <h4 class="mb-1">Flexible Learning</h4>
-                    <p class="px-lg-7 px-xl-8">Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                    <h4 class="mb-1">Vision</h4>
+                    <p class="px-lg-7 px-xl-8">{{i.vision}}</p>
                 </div>
 
                 <div class="col-md-4 mb-4 mb-md-0">
@@ -140,142 +141,14 @@
                         </div>
                     </div>
 
-                    <h4 class="mb-1">Learn With Experts</h4>
-                    <p class="px-lg-7 px-xl-8">Sed cursus turpis vitae tortor donec eaque ipsa quaeab illo.</p>
+                    <h4 class="mb-1">Values</h4>
+                    <p class="px-lg-7 px-xl-8">{{i.values}}</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TESTIMONIAL
-    ================================================== -->
-    <section class="py-8 pt-xl-11 pb-xl-9 bg-white">
-        <div class="container-fluid px-xl-9">
-            <div class="text-center mb-2" data-aos="fade-up">
-                <h1 class="mb-1">What Our Students Have To Say</h1>
-                <p class="font-size-lg text-capitalize mb-0">Discover your perfect program in our courses.</p>
-            </div>
-
-            <div class="mx-n4 bg-is-selected" data-flickity='{"pageDots": true, "prevNextButtons": false, "cellAlign": "center", "wrapAround": true, "imagesLoaded": true}'>
-                <div class="col-md-6 col-xl-4 py-md-7 py-3" data-aos="fade-up" data-aos-delay="50">
-                    <!-- Card -->
-                    <div class="card text-center p-8 py-lg-8 px-lg-9 w-lg-96 mx-auto rounded-xl lift-md">
-                        <!-- Image -->
-                        <div class="position-relative">
-                            <div class="card-float top-0 left-0">
-                                <!-- Icon -->
-                                <svg width="36" height="23" viewBox="0 0 36 23" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.5 23L15.5 -4.76837e-06H10L2.98023e-08 23H9.5ZM29.5 23L35.5 -4.76837e-06H30L20 23H29.5Z" fill="currentColor"/>
-                                </svg>
-
-                            </div>
-
-                            <div class="avatar avatar-custom mb-5">
-                                <img src="{% static 'assets/img/avatars/avatar-1.jpg' %}" alt="..." class="avatar-img rounded-circle">
-                            </div>
-                            <div class="media-body">
-                                <h5 class="mb-0">Albert Cole</h5>
-                                <span>Designer</span>
-                            </div>
-                        </div>
-
-                        <!-- Footer -->
-                        <div class="card-footer px-0 pb-0 pt-4">
-                            <p class="mb-0 text-capitalize">“ I believe in lifelong learning and Skola is a great place to learn from experts. I've learned a lot and recommend it to all my friends “</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4 py-md-7 py-3" data-aos="fade-up" data-aos-delay="100">
-                    <!-- Card -->
-                    <div class="card text-center p-8 py-lg-8 px-lg-9 w-lg-96 mx-auto rounded-xl lift-md">
-                        <!-- Image -->
-                        <div class="position-relative">
-                            <div class="card-float top-0 left-0">
-                                <!-- Icon -->
-                                <svg width="36" height="23" viewBox="0 0 36 23" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.5 23L15.5 -4.76837e-06H10L2.98023e-08 23H9.5ZM29.5 23L35.5 -4.76837e-06H30L20 23H29.5Z" fill="currentColor"/>
-                                </svg>
-
-                            </div>
-
-                            <div class="avatar avatar-custom mb-5">
-                                <img src="{% static 'assets/img/avatars/avatar-2.jpg' %}" alt="..." class="avatar-img rounded-circle">
-                            </div>
-                            <div class="media-body">
-                                <h5 class="mb-0">Alison Dawn</h5>
-                                <span>WordPress Developer</span>
-                            </div>
-                        </div>
-
-                        <!-- Footer -->
-                        <div class="card-footer px-0 pb-0 pt-4">
-                            <p class="mb-0 text-capitalize">“ I believe in lifelong learning and Skola is a great place to learn from experts. I've learned a lot and recommend it to all my friends “</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4 py-md-7 py-3" data-aos="fade-up" data-aos-delay="150">
-                    <!-- Card -->
-                    <div class="card text-center p-8 py-lg-8 px-lg-9 w-lg-96 mx-auto rounded-xl lift-md">
-                        <!-- Image -->
-                        <div class="position-relative">
-                            <div class="card-float top-0 left-0">
-                                <!-- Icon -->
-                                <svg width="36" height="23" viewBox="0 0 36 23" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.5 23L15.5 -4.76837e-06H10L2.98023e-08 23H9.5ZM29.5 23L35.5 -4.76837e-06H30L20 23H29.5Z" fill="currentColor"/>
-                                </svg>
-
-                            </div>
-
-                            <div class="avatar avatar-custom mb-5">
-                                <img src="{% static 'assets/img/avatars/avatar-3.jpg' %}" alt="..." class="avatar-img rounded-circle">
-                            </div>
-                            <div class="media-body">
-                                <h5 class="mb-0">Daniel Parker</h5>
-                                <span>Front-end Developer</span>
-                            </div>
-                        </div>
-
-                        <!-- Footer -->
-                        <div class="card-footer px-0 pb-0 pt-4">
-                            <p class="mb-0 text-capitalize">“ I believe in lifelong learning and Skola is a great place to learn from experts. I've learned a lot and recommend it to all my friends “</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-xl-4 py-md-7 py-3" data-aos="fade-up" data-aos-delay="200">
-                    <!-- Card -->
-                    <div class="card text-center p-8 py-lg-8 px-lg-9 w-lg-96 mx-auto rounded-xl lift-md">
-                        <!-- Image -->
-                        <div class="position-relative">
-                            <div class="card-float top-0 left-0">
-                                <!-- Icon -->
-                                <svg width="36" height="23" viewBox="0 0 36 23" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.5 23L15.5 -4.76837e-06H10L2.98023e-08 23H9.5ZM29.5 23L35.5 -4.76837e-06H30L20 23H29.5Z" fill="currentColor"/>
-                                </svg>
-
-                            </div>
-
-                            <div class="avatar avatar-custom mb-5">
-                                <img src="{% static 'assets/img/avatars/avatar-4.jpg' %}" alt="..." class="avatar-img rounded-circle">
-                            </div>
-                            <div class="media-body">
-                                <h5 class="mb-0">Albert Cole</h5>
-                                <span>Designer</span>
-                            </div>
-                        </div>
-
-                        <!-- Footer -->
-                        <div class="card-footer px-0 pb-0 pt-4">
-                            <p class="mb-0 text-capitalize">“ I believe in lifelong learning and Skola is a great place to learn from experts. I've learned a lot and recommend it to all my friends “</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+   
     <!-- BRAND
     ================================================== -->
     <div class="py-2 pt-md-5 pb-md-11">
@@ -479,4 +352,6 @@
             </div>
         </div>
     </section>
+
+    {% endfor %}
 {% endblock %}

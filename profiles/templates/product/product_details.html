@@ -1,0 +1,337 @@
+{% extends 'mls/base.html' %}
+
+{% load static %}
+
+
+{% block title %} Product | {% endblock title %}
+
+
+{% block content %}
+
+ <!-- PAGE TITLE
+    ================================================== -->
+    <header class="py-8 py-md-10" style="background-image: none;">
+        <div class="container text-center py-xl-2">
+            <h1 class="display-4 fw-semi-bold mb-0">Shop Single</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                    <li class="breadcrumb-item">
+                        <a class="text-gray-800" href="#">
+                            Home
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                        Shop Single
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <!-- Img -->
+        <img class="d-none img-fluid" src="...html" alt="...">
+    </header>
+
+
+    <!-- SHOP SINGLE
+    ================================================== -->
+    <div class="container pb-4 pb-xl-7">
+        <div class="row mb-4">
+            <div class="col-lg-6 col-xl-7 mb-6 mb-lg-10">
+                <div class="border rounded bg-light p-6 d-flex place-content-center">
+                    <img class="rounded img-fluid" src="assets/img/products/product-34.png" alt="...">
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-5 mb-6 mb-lg-10">
+                <div class="ms-xl-5 mt-5">
+                    <h2 class="">Urban Bags - KeySmart - Premium Key Holders</h2>
+                    <p class="mb-5">Do you want to become a UI/UX designer but you don't know where to start?</p>
+
+                    <div class="mb-5">
+                        <div class="mb-1">Total price:</div>
+                        <ins class="h3 mb-0">$415.99</ins>
+                        <del class="font-size-sm">$959</del>
+                    </div>
+
+                    <div class="quantity-increment d-flex align-items-center mb-6">
+                        <span class="text-dark me-3">Quantity</span>
+
+                        <div class="border rounded d-flex align-items-center me-5">
+                            <input class="form-control form-control-sm border-0 quantity mw-70p px-2" min="0" name="quantity" value="1" type="number">
+                            <div class="d-flex flex-column me-3">
+                                <button class="border-0 shadow-none quantity-plus font-size-10 p-0 bg-transparent outline-0 text-dark">
+                                    <i class="fas fa-chevron-up"></i>
+                                </button>
+                                <button class="border-0 shadow-none quantity-minus font-size-10 p-0 bg-transparent outline-0 text-dark">
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <ul class="mb-0 list-style-v1 list-unstyled">
+                            <li class="mb-0">432 in stock</li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex mb-5">
+                        <a href="#" class="btn btn-blue btn-x-wide icon-xs me-6 d-flex align-items-center justify-content-center">
+                            <!-- Icon -->
+                            <svg width="13" height="15" viewBox="0 0 13 15" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.2422 3.51562H10.4567C10.2239 1.53873 8.53839 0 6.5 0C4.46161 0 2.7761 1.53873 2.54334 3.51562H0.757812C0.434199 3.51562 0.171875 3.77795 0.171875 4.10156V14.4141C0.171875 14.7377 0.434199 15 0.757812 15H12.2422C12.5658 15 12.8281 14.7377 12.8281 14.4141V4.10156C12.8281 3.77795 12.5658 3.51562 12.2422 3.51562ZM6.5 1.17188C7.89113 1.17188 9.04939 2.18716 9.27321 3.51562H3.72679C3.95062 2.18716 5.10887 1.17188 6.5 1.17188ZM11.6562 13.8281H1.34375V4.6875H2.51562V6.44531C2.51562 6.76893 2.77795 7.03125 3.10156 7.03125C3.42518 7.03125 3.6875 6.76893 3.6875 6.44531V4.6875H9.3125V6.44531C9.3125 6.76893 9.57482 7.03125 9.89844 7.03125C10.2221 7.03125 10.4844 6.76893 10.4844 6.44531V4.6875H11.6562V13.8281Z" fill="currentColor"/>
+                            </svg>
+
+                            <span class="ms-3 h5 mb-0 text-white">Add to Cart</span>
+                        </a>
+                        <a href="#" class="btn btn-teal rounded-circle d-flex align-items-center py-2">
+                            <i class="far fa-heart h4 mb-0 text-white"></i>
+                        </a>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th class="fw-normal">Sku:</th>
+                                    <td>RTA-0058</td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-normal">Category:</th>
+                                    <td>Book</td>
+                                </tr>
+                                <tr>
+                                    <th class="fw-normal">Tags:</th>
+                                    <td>business / seo</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <!-- COURSE INFO TAB
+                ================================================== -->
+                <div id="Description" class="mb-8">
+                    <ul class="nav course-tab-v1 border-bottom h4 mb-8 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#Description" data-bs-toggle="smooth-scroll" data-offset="0">Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Reviews" data-bs-toggle="smooth-scroll" data-offset="0">Reviews</a>
+                        </li>
+                    </ul>
+
+                    <div class="mw-xl-65 mx-auto">
+                        <h3 class="">Details</h3>
+                        <p class="mb-6 line-height-md">Do you want to become a UI/UX designer but you don't know where to start? This course will allow you to develop your user interface design skills and you can add UI designer to your CV and start getting clients for your skills.</p>
+                        <p class="mb-6 line-height-md">Hi everyone. I'm Arash and I'm a UI/UX designer. In this course, I will help you learn and master Figma app comprehensively from scratch. Figma is an innovative and brilliant tool for User Interface design. It's used by everyone from entrepreneurs and start-ups to Apple, Airbnb, Facebook, etc.</p>
+
+                        <h3 class="mb-5">Material and care</h3>
+                        <div class="row row-cols-lg-2 mb-8">
+                            <div class="col-md">
+                                <ul class="list-style-v2 list-unstyled">
+                                    <li>Main: 100% Cotton</li>
+                                    <li>Soft twill</li>
+                                    <li>Ribbed, diagonal pattern</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-md">
+                                <ul class="list-style-v2 list-unstyled ms-xl-6">
+                                    <li>One size fits all</li>
+                                    <li>Imported</li>
+                                    <li>Product color: Dark greenish</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="Reviews" class="mb-8">
+                    <ul class="nav course-tab-v1 border-bottom h4 mb-8 justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Description" data-bs-toggle="smooth-scroll" data-offset="0">Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#Reviews" data-bs-toggle="smooth-scroll" data-offset="0">Reviews</a>
+                        </li>
+                    </ul>
+
+                    <div class="mw-xl-65 mx-auto">
+                        <div class="row align-items-center mb-8">
+                            <div class="col-md-auto mb-5 mb-md-0">
+                                <div class="border rounded shadow d-flex align-items-center justify-content-center px-9 py-8">
+                                    <div class="m-2 text-center">
+                                        <h1 class="display-2 mb-0 fw-medium mb-n1">4.93</h1>
+                                        <h5 class="mb-0">Course rating</h5>
+                                        <div class="star-rating">
+                                            <div class="rating" style="width:100%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md">
+                                <div class="d-md-flex align-items-center my-3 my-md-4">
+                                    <div class="bg-gray-200 position-relative rounded-pill flex-grow-1 me-md-5 mb-2 mb-md-0 mw-md-260p" style="height: 10px;">
+                                        <div class="bg-teal rounded-pill position-absolute top-0 left-0 bottom-0" style="width: 90%;"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <div class="star-rating star-rating-lg secondary me-4">
+                                            <div class="rating" style="width:90%;"></div>
+                                        </div>
+                                        <span>4132</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-md-flex align-items-center my-3 my-md-4">
+                                    <div class="bg-gray-200 position-relative rounded-pill flex-grow-1 me-md-5 mb-2 mb-md-0 mw-md-260p" style="height: 10px;">
+                                        <div class="bg-teal rounded-pill position-absolute top-0 left-0 bottom-0" style="width: 60%;"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <div class="star-rating star-rating-lg secondary me-4">
+                                            <div class="rating" style="width:60%;"></div>
+                                        </div>
+                                        <span>150</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-md-flex align-items-center my-3 my-md-4">
+                                    <div class="bg-gray-200 position-relative rounded-pill flex-grow-1 me-md-5 mb-2 mb-md-0 mw-md-260p" style="height: 10px;">
+                                        <div class="bg-teal rounded-pill position-absolute top-0 left-0 bottom-0" style="width: 50%;"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <div class="star-rating star-rating-lg secondary me-4">
+                                            <div class="rating" style="width:50%;"></div>
+                                        </div>
+                                        <span>50</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-md-flex align-items-center my-3 my-md-4">
+                                    <div class="bg-gray-200 position-relative rounded-pill flex-grow-1 me-md-5 mb-2 mb-md-0 mw-md-260p" style="height: 10px;">
+                                        <div class="bg-teal rounded-pill position-absolute top-0 left-0 bottom-0" style="width: 35%;"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <div class="star-rating star-rating-lg secondary me-4">
+                                            <div class="rating" style="width:35%;"></div>
+                                        </div>
+                                        <span>32</span>
+                                    </div>
+                                </div>
+
+                                <div class="d-md-flex align-items-center my-3 my-md-4">
+                                    <div class="bg-gray-200 position-relative rounded-pill flex-grow-1 me-md-5 mb-2 mb-md-0 mw-md-260p" style="height: 10px;">
+                                        <div class="bg-teal rounded-pill position-absolute top-0 left-0 bottom-0" style="width: 15%;"></div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center">
+                                        <div class="star-rating star-rating-lg secondary me-4">
+                                            <div class="rating" style="width:15%;"></div>
+                                        </div>
+                                        <span>1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="list-unstyled pt-2">
+                            <li class="media d-flex">
+                                <div class="avatar avatar-xxl me-3 me-md-6 flex-shrink-0">
+                                    <img src="assets/img/avatars/avatar-1.jpg" alt="..." class="avatar-img rounded-circle">
+                                </div>
+                                <div class="media-body flex-shrink-1">
+                                    <div class="d-md-flex align-items-center mb-5">
+                                        <div class="me-auto mb-4 mb-md-0">
+                                            <h5 class="mb-0">Oscar Cafeo</h5>
+                                            <p class="font-size-sm font-italic">Beautiful courses</p>
+                                        </div>
+                                        <div class="star-rating">
+                                            <div class="rating" style="width:100%;"></div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-6 line-height-md">This course was well organized and covered a lot more details than any other Figma courses. I really enjoy it. One suggestion is that it can be much better if we could complete the prototype together. Since we created 24 frames, I really want to test it on Figma mirror to see all the connections. Could you please let me take a look at the complete prototype?</p>
+                                </div>
+                            </li>
+                            <li class="media d-flex">
+                                <div class="avatar avatar-xxl me-3 me-md-6 flex-shrink-0">
+                                    <img src="assets/img/avatars/avatar-2.jpg" alt="..." class="avatar-img rounded-circle">
+                                </div>
+                                <div class="media-body flex-shrink-1">
+                                    <div class="d-md-flex align-items-center mb-5">
+                                        <div class="me-auto mb-4 mb-md-0">
+                                            <h5 class="mb-0">Alex Morgan</h5>
+                                            <p class="font-size-sm font-italic">Beautiful courses</p>
+                                        </div>
+                                        <div class="star-rating">
+                                            <div class="rating" style="width:100%;"></div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-6 line-height-md">This course was well organized and covered a lot more details than any other Figma courses. I really enjoy it. One suggestion is that it can be much better if we could complete the prototype together. Since we created 24 frames, I really want to test it on Figma mirror to see all the connections. Could you please let me take a look at the complete prototype?</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="border shadow rounded p-6 p-md-9">
+                            <h3 class="mb-2">Add Reviews & Rate</h3>
+                            <div class="">What is it like to Course?</div>
+                            <form>
+                                <div class="clearfix">
+                                    <fieldset class="slect-rating mb-3">
+                                        <input type="radio" id="star5" name="rating" value="5" />
+                                        <label class = "full" for="star5" title="Awesome - 5 stars"></label>
+
+                                        <input type="radio" id="star4half" name="rating" value="4 and a half" />
+                                        <label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+
+                                        <input type="radio" id="star4" name="rating" value="4" />
+                                        <label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+
+                                        <input type="radio" id="star3half" name="rating" value="3 and a half" />
+                                        <label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+
+                                        <input type="radio" id="star3" name="rating" value="3" />
+                                        <label class = "full" for="star3" title="Meh - 3 stars"></label>
+
+                                        <input type="radio" id="star2half" name="rating" value="2 and a half" />
+                                        <label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+
+                                        <input type="radio" id="star2" name="rating" value="2" />
+                                        <label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+
+                                        <input type="radio" id="star1half" name="rating" value="1 and a half" />
+                                        <label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+
+                                        <input type="radio" id="star1" name="rating" value="1" />
+                                        <label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+
+                                        <input type="radio" id="starhalf" name="rating" value="half" />
+                                        <label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+                                    </fieldset>
+                                </div>
+
+                                <div class="form-group mb-6">
+                                    <label for="exampleInputTitle1">Review Title</label>
+                                    <input type="text" class="form-control placeholder-1" id="exampleInputTitle1" placeholder="Courses">
+                                </div>
+
+                                <div class="form-group mb-6">
+                                    <label for="exampleFormControlTextarea1">Review Content</label>
+                                    <textarea class="form-control placeholder-1" id="exampleFormControlTextarea1" rows="6" placeholder="Content"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-block mw-md-300p">SUBMIT REVIEW</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock content %}

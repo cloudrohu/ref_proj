@@ -50,7 +50,7 @@ def PRODUCT(request):
 	    'FilterPrice':FilterPrice,
         
     }
-    return render(request, 'product/product/product.html',context)
+    return render(request, 'product/product.html',context)
 
 
 def product_details(request,slug): 

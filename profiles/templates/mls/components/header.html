@@ -5,7 +5,9 @@
 
             <!-- Brand -->
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'skola/assets/img/logo.png' %}" class="navbar-brand-img" alt="...">
+                {% for i in header %}
+                <img src="{{i.logo.url}}" style="height: 60px; width: 135px;" class="navbar-brand-img" alt="...">
+                {% endfor %}
             </a>
 
             <!-- Vertical Menu -->
@@ -107,7 +109,7 @@
                      {% if user.is_authenticated and user.first_name == '' %}
                     <li class="nav-item dropdown border-0 px-1 px-md-3">
                          <a class="nav-link dropdown-toggle" id="user" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-                           Hello {{user.username}}
+                           {{user.username}}
                         </a>
 
                         <ul class="dropdown-menu border-xl shadow-none" aria-labelledby="user">
@@ -131,7 +133,7 @@
                     {% elif user.is_authenticated %}
                      <li class="nav-item dropdown border-0 px-1 px-md-3">
                          <a class="nav-link dropdown-toggle" id="user" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
-                           Hello , {{user.first_name}}&nbsp;{{user.last_name}}
+                           {{user.first_name}}&nbsp;{{user.last_name}}
                         </a>
 
                         <ul class="dropdown-menu border-xl shadow-none" aria-labelledby="user">

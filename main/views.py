@@ -26,11 +26,14 @@ def ABOUT_US(request):
 
     header = Header.objects.all().order_by('-id')[0:1]
     footer = Footer.objects.all().order_by('-id')[0:1]
+    about = About.objects.all().order_by('-id')[0:1]
+
 
 
     context = {               
         'header': header,        
         'footer': footer,        
+        'about': about,        
     }
     
     return render(request,'mls/Main/about_us.html',context )
