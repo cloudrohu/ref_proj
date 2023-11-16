@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 
-
+from main.models import *
 
 
 # Create your views here.
@@ -25,8 +25,13 @@ def my_recommendations_view(request):
 
 @login_required(login_url='main-view')
 def my_account_view(request):
+    header = Header.objects.all().order_by('-id')[0:1]
+    context = {      
+        'header' : header,
+        
+    }
     
-    return render(request, 'dashboard/main.html', )
+    return render(request, 'dashboard/main.html',context )
 
 
 
