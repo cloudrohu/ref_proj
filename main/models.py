@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.html import mark_safe
+from ckeditor_uploader.fields import RichTextUploadingField
 
 from django.utils.text import slugify
 from django.db.models.signals import pre_save
@@ -201,7 +202,8 @@ class Contact(models.Model):
     
 class About(models.Model):   
     image = models.ImageField(upload_to='image') 
-    main_title=models.CharField(max_length=2000)
+    main_title=RichTextUploadingField(blank=True)
+
     experience=models.CharField(max_length=3)
     title=models.CharField(max_length=255)
     sub_title=models.CharField(max_length=255)    

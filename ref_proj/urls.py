@@ -15,6 +15,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
     path('jet/', include('jet.urls')),
     path('jet/dashboard/', include('jet.dashboard.urls', 'jet-dashboard')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+
 
 
     path('', home_view, name='home'),
@@ -32,7 +34,7 @@ urlpatterns = [
 
 
 
-    path('about', ABOUT_US,name='about'),
+    path('about/', ABOUT_US,name='about'),
     path('contact', CONTCAT,name='contact'),
     path('404', PAGE_NOTFOUND,name='404'),
 

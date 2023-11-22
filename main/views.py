@@ -43,11 +43,13 @@ def ABOUT_US(request):
 def CONTCAT(request):
     header = Header.objects.all().order_by('-id')[0:1]
     footer = Footer.objects.all().order_by('-id')[0:1]
+    contact = Contact.objects.all().order_by('-id')[0:1]
 
 
     context = {               
         'header': header,        
         'footer': footer,        
+        'contact': contact,        
     }
     return render(request,'mls/Main/contact_us.html',context )
 

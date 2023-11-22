@@ -35,31 +35,6 @@ def GURUKUL(request):
     return render(request,'mls/Main/home.html', context)
 
 
-
-def ABOUT_US(request):
-    header = Header.objects.all().order_by('-id')[0:1]
-    footer = Footer.objects.all().order_by('-id')[0:1]    
-    cotegory = Categories.objects.all().order_by('id')[0:5]
-
-    context = {
-        'cotegory' : cotegory,
-        'header' : header,
-        'footer' : footer,
-    }
-    return render(request,'Main/about_us.html',context)
-
-def CONTCAT(request):
-    header = Header.objects.all().order_by('-id')[0:1]
-    footer = Footer.objects.all().order_by('-id')[0:1]
-    cotegory = Categories.objects.all().order_by('id')[0:5]
-
-    context = {
-        'cotegory' : cotegory,
-        'header' : header,
-        'footer' : footer,
-    }
-    return render(request,'Main/contact_us.html',context)
-
 #-------------------------------------------------------------------------------------------------------------
 def SINGLE_COURS(request):
 
